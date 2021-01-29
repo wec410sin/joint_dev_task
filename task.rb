@@ -40,21 +40,24 @@ def q5
   array2 = [1, 5, 8, 10]
 
   # 以下に回答を記載
-　 
+  array.empty?
 end
 
 def q6
   numbers1 = [1, 2, 3, 4, 5]
 
   # 以下に回答を記載
-
+  numbers1.each do |number|
+  numbers2 = number * 10
+  puts numbers2
+  end
 end
 
 def q7
   array = ["1", "2", "3", "4", "5"]
 
   # 以下に回答を記載
-
+  array.map!(&:to_i)
   # 以下は変更しないで下さい
   p array
 end
@@ -63,7 +66,9 @@ def q8
   programming_languages = %w(ruby php python javascript)
 
   # 以下に回答を記載
-
+　programming_languages = #{"programming_languages"}
+  programming_languages.capitalize!
+  upper_case_programming_languages.upcase!
   # 以下は変更しないで下さい
   p programming_languages
   p upper_case_programming_languages
