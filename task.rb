@@ -46,7 +46,7 @@ end
 
 def q6
   numbers1 = [1, 2, 3, 4, 5]
-  numbers2 = numbers1.map! { |x| x * 10 }
+  numbers2 = numbers1.map! { |num| num * 10 }
   # 以下に回答を記載
   p numbers2
 
@@ -65,7 +65,7 @@ def q8
   programming_languages = %w(ruby php python javascript)
 
   # 以下に回答を記載
-　programming_languages = @programming_languages
+  programming_languages = programming_languages.map{|language|language.capitalize}
   upper_case_programming_languages = programming_languages.map(&:upcase)
   # 以下は変更しないで下さい
   p programming_languages
