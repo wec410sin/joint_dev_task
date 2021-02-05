@@ -117,9 +117,7 @@ def q13
   update_data = { age: 32, address: "沖縄" }
 
   # 以下に回答を記載
-  user_data[:age] = 32
-  user_data[:address] = "沖縄"
-  puts user_data
+  p user_data.update(update_data)
 end
 
 def q14
@@ -135,19 +133,9 @@ def q15
   data2 = { name: "yamada", hobby: "baseball", role: "normal" }
 
   # 以下に回答を記載
-if data1[:age]
-  puts "OK"
-else
-  puts "NG"
+  data1[:age]? (puts "OK") : (puts "NG")
+  data2[:age]? (puts "OK") : (puts "NG")
 end
-
-if data2[:age]
-  puts "OK"
-else
-  puts "NG"
-end
-end
-
 def q16
   users = [
     { name: "satou", age: 22 },
@@ -166,7 +154,6 @@ class UserQ17
   # 以下に回答を記載
 
 end
-
 def q17
   # ここは変更しないで下さい（ユーザー情報は変更していただいてOKです）
   user1 = UserQ17.new(name: "神里", age: 32, gender: "男")
