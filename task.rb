@@ -159,9 +159,11 @@ class UserQ17
   end
 
   def info
-    puts "名前：#{@name}"
-    puts "年齢：#{@age} "
-    puts "性別：#{@gender}"
+    puts <<~TEXT 
+    名前：#{@name}
+    年齢：#{@age}
+    性別：#{@gender}
+    TEXT
   end
 end
 
@@ -183,11 +185,7 @@ class UserQ18
   end
 
   def introduce
-    if @age >= 20
-      puts "こんにちは,#{@name}と申します。宜しくお願いいたします。"  
-    else
-      puts "はいさいまいど〜,#{@name}です!!!"  
-    end
+    print @age >= 20 ? "こんにちは,#{@name}と申します。宜しくお願いいたします。" : "はいさいまいど〜,#{@name}です!!!"
   end
 end
 
@@ -208,8 +206,8 @@ class Item
   end
   
   def name
-    puts "#{@name}"
-  end  
+    @name
+  end 
 end
 
 def q19
@@ -221,14 +219,14 @@ end
 class UserQ20
   # 以下に回答を記載
   attr_reader :name, :age
-  def initialize(params)
+  def initialize(**params)
     @name = params[:name]
     @age = params[:age]
   end
 end
 class Zoo
   # 以下に回答を記載
-  def initialize(params)
+  def initialize(**params)
     @entry_fee = params[:entry_fee]
   end
 
